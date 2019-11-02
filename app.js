@@ -32,7 +32,6 @@ const players = [
 ];
 
 const Header = props => {
-	console.log(props);
 	return (
 		<header>
 			<h1>{props.title}</h1>
@@ -56,6 +55,7 @@ class Counter extends React.Component {
     score: 0
   };
 
+
   incrementScore = () => {
     this.setState({
       score: this.state.score + 1
@@ -64,7 +64,7 @@ class Counter extends React.Component {
 
   decrementScore = () => {
     if (this.state.score <= 0) {
-      console.log('score is <= 0')
+      return
     } else {
       this.setState({
         score: this.state.score - 1 
